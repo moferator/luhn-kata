@@ -19,4 +19,9 @@ dependencies {
     testImplementation libs.test.junit,
             libs.test.assertj,
             libs.test.mockito
+
+    testImplementation libs.test.serenityCore,
+            libs.test.serenityJunit,
+            libs.test.serenityScreenplay,
+            libs.test.serenityCucumber
 }
