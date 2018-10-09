@@ -1,0 +1,22 @@
+defaultTasks 'clean', 'build'
+
+apply from: "$rootDir/dependencies.gradle"
+apply plugin: 'java'
+
+version = '1.0.0'
+group = 'org.acmebank.luhn'
+
+repositories {
+    clear()
+    jcenter()
+}
+
+dependencies {
+    implementation libs.slf4j
+
+    runtimeOnly libs.logback
+
+    testImplementation libs.test.junit,
+            libs.test.assertj,
+            libs.test.mockito
+}
